@@ -1,0 +1,17 @@
+C:\Users\W_Irr\source\repos\XaminerPPT\XaminerPPT\bin\x64\Debug\XaminerPPT.exe.config
+C:\Users\W_Irr\source\repos\XaminerPPT\XaminerPPT\bin\x64\Debug\XaminerPPT.exe
+C:\Users\W_Irr\source\repos\XaminerPPT\XaminerPPT\bin\x64\Debug\XaminerPPT.pdb
+C:\Users\W_Irr\source\repos\XaminerPPT\XaminerPPT\bin\x64\Debug\MoonPdfLib.dll
+C:\Users\W_Irr\source\repos\XaminerPPT\XaminerPPT\bin\x64\Debug\MouseKeyboardActivityMonitor.dll
+C:\Users\W_Irr\source\repos\XaminerPPT\XaminerPPT\obj\x64\Debug\MainWindow.g.cs
+C:\Users\W_Irr\source\repos\XaminerPPT\XaminerPPT\obj\x64\Debug\App.g.cs
+C:\Users\W_Irr\source\repos\XaminerPPT\XaminerPPT\obj\x64\Debug\XaminerPPT_MarkupCompile.cache
+C:\Users\W_Irr\source\repos\XaminerPPT\XaminerPPT\obj\x64\Debug\XaminerPPT_MarkupCompile.lref
+C:\Users\W_Irr\source\repos\XaminerPPT\XaminerPPT\obj\x64\Debug\MainWindow.baml
+C:\Users\W_Irr\source\repos\XaminerPPT\XaminerPPT\obj\x64\Debug\XaminerPPT.g.resources
+C:\Users\W_Irr\source\repos\XaminerPPT\XaminerPPT\obj\x64\Debug\XaminerPPT.Properties.Resources.resources
+C:\Users\W_Irr\source\repos\XaminerPPT\XaminerPPT\obj\x64\Debug\XaminerPPT.csproj.GenerateResource.cache
+C:\Users\W_Irr\source\repos\XaminerPPT\XaminerPPT\obj\x64\Debug\XaminerPPT.csproj.CoreCompileInputs.cache
+C:\Users\W_Irr\source\repos\XaminerPPT\XaminerPPT\obj\x64\Debug\XaminerPPT.csproj.CopyComplete
+C:\Users\W_Irr\source\repos\XaminerPPT\XaminerPPT\obj\x64\Debug\XaminerPPT.exe
+C:\Users\W_Irr\source\repos\XaminerPPT\XaminerPPT\obj\x64\Debug\XaminerPPT.pdb

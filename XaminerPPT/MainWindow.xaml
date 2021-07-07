@@ -1,0 +1,46 @@
+﻿<Window x:Class="XaminerPrintPreview.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        x:Name="mainWindow"
+        xmlns:mpp="clr-namespace:MoonPdfLib;assembly=MoonPdfLib"
+        Title="XaminerPPT" Height="680" Width="900">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30px"></RowDefinition>
+            <RowDefinition Height="30px"></RowDefinition>
+            <RowDefinition Height="30px"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Column="0" Grid.Row="0">
+            <Button Name="browseButton" DockPanel.Dock="Left" Click="BrowseButton_Click" Width="120">Browse Folder...</Button>
+            <Button Name="exportAllButton" DockPanel.Dock="Right" Click="ExportAllButton_Click" Width="120">Export Filtered Exams</Button>
+            <Button Name="printAllButton" DockPanel.Dock="Right" Click="PrintAllButton_Click" Width="120">Print Filtered Exams</Button>
+            
+            <Label Name="examLabel" HorizontalAlignment="Center" VerticalAlignment="Center">Exam: {Directory}</Label>
+        </DockPanel>
+        <DockPanel Grid.Column="0" Grid.Row="1">
+            <Button Name="exportButton" DockPanel.Dock="Right" Click="ExportButton_Click" Width="120">Export Current Exam</Button>
+            <Button Name="printButton" DockPanel.Dock="Right" Click="PrintButton_Click" Width="120">Print Current Exam</Button>
+            <Label Name="submissionLabel" HorizontalAlignment="Center" VerticalAlignment="Center" DockPanel.Dock="Left" Margin="120,0,0,0">File x / y {Studentname}</Label>
+        </DockPanel>
+        <DockPanel Grid.Column="0" Grid.Row="2">
+            <Button Name="prevButton" DockPanel.Dock="Left" Click="PrevButton_Click" Width="120">← Prev Submission</Button>
+            <Button Name="nextButton" DockPanel.Dock="Right" Click="NextButton_Click" Width="120">Next Submission→</Button>
+            <Label Name="filterLabel" VerticalAlignment="Center" HorizontalAlignment="Center">Filter:</Label>
+            <TextBox Name="filterTextBox" Width="480" TextChanged="OnTextBoxTextChanged" HorizontalAlignment="Left" VerticalAlignment="Center" Text="{Binding FilterKeywords, UpdateSourceTrigger=PropertyChanged}"/>
+        </DockPanel>
+        <DockPanel Grid.Column="0" Grid.Row="3">
+            <ProgressBar Name="progressBar" Minimum="0" Maximum="100" Visibility="Collapsed"/>
+        </DockPanel>
+        <DockPanel Grid.Column="0" Grid.Row="4">
+            <mpp:MoonPdfPanel Name="pdfPanel" ViewType="Facing" Background="LightGray" PageMargin="0,2,4,2" AllowDrop="True" PageRowDisplay="ContinuousPageRows"/>
+        </DockPanel>
+    </Grid>
+</Window>

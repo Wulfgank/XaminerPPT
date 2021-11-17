@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Drawing.Printing;
 using System.IO;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,6 +20,29 @@ namespace XaminerPrintPreview
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region InterOp
+        [DllImport("user32.dll")]
+        static extern uint GetWindowLong(IntPtr hWnd, int nIndex);
+
+        [DllImport("user32.dll")]
+        static extern int SetWindowLong(IntPtr hWnd, int nIndex, uint dwNewLong);
+
+        private const int GWL_STYLE = -16;
+
+        private const uint WS_SYSMENU = 0x80000;
+
+        protected override void OnSourceInitialized(EventArgs e)
+        {
+            // to hide the standard application icon on the 
+            // top left of the window, but hides the 3 buttons as well...
+            /*IntPtr hwnd = new System.Windows.Interop.WindowInteropHelper(this).Handle;
+            SetWindowLong(hwnd, GWL_STYLE,
+                GetWindowLong(hwnd, GWL_STYLE) & (0xFFFFFFFF ^ WS_SYSMENU));
+
+            base.OnSourceInitialized(e);*/
+        }
+        #endregion
+
         #region Fields
         // Contains 1 exam, the current filter text, a "filter result (list<Submission>)" and a current submission
         private Model _model;

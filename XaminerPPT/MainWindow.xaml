@@ -40,7 +40,8 @@
             <ProgressBar Name="progressBar" Minimum="0" Maximum="100" Visibility="Collapsed"/>
         </DockPanel>
         <DockPanel Grid.Column="0" Grid.Row="4">
-            <mpp:MoonPdfPanel Name="pdfPanel" ViewType="Facing" Background="LightGray" PageMargin="0,2,4,2" AllowDrop="True" PageRowDisplay="ContinuousPageRows"/>
+            <mpp:MoonPdfPanel Name="pdfPanel" ViewType="Facing" Background="LightGray" 
+                              PageMargin="0,2,4,2" AllowDrop="True" PageRowDisplay="ContinuousPageRows"/>
         </DockPanel>
     </Grid>
 </Window>

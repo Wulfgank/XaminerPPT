@@ -190,7 +190,7 @@ namespace XaminerConverter
                     case AnswerType.TEXT_QUESTION:
                     case AnswerType.CODE_QUESTION:
                         sb.AppendLine("      <pre style=\"font-size: 22px; white-space: pre-wrap;\">");
-                        sb.AppendLine(ea.Answer.Replace("<", "&lt;").TrimEnd('\n', '\r'));
+                        sb.AppendLine(System.Web.HttpUtility.HtmlEncode(ea.Answer).TrimEnd('\n', '\r'));
                         sb.AppendLine("      </pre>");
                         exerciseNumber++;
                         break;
